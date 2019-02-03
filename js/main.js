@@ -181,12 +181,12 @@ function handlerScreenScroll(e) {
 
 
   if (e.deltaY > 0) {
-      if (screen > 0) {
-        screen--;
-      }
-  } else {
     if (screen < pages.length-1) {
       screen++;
+    }
+  } else {
+    if (screen > 0) {
+      screen--;
     }
   }
 
