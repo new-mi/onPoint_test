@@ -1,0 +1,345 @@
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+  font-style: normal;
+  
+
+  font-family: 'GothamProLight';
+	src: url('../fonts/GothamPro-Light.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../fonts/GothamPro-Light.eot') format('embedded-opentype'),
+		url('../fonts/GothamPro-Light.woff') format('woff'),
+		url('../fonts/GothamPro-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+
+/* MAIN CONTENT */
+
+.wrap{
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url('../img/bg_parallax.png') no-repeat;
+  
+  background-position-x: 0;
+  background-position-y: 0;
+
+  background-size: 100% 300%;
+
+  transition: all 1.5s;
+
+  z-index: -10;
+}
+
+.main, .page{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  transition: top 1.5s;
+}
+
+.wrap_container, .wrap-circles{
+  z-index: 10;
+}
+
+.section-1{
+  background-size: 100% 100%;
+}
+
+.section-1 h2{
+  width: 100%;
+  color: #0d319c;
+  position: absolute;
+  top: 26%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  font-family: "GothamProLight", Arial,sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  line-height: 64px;
+}
+
+.circle_text{
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0d319c;
+}
+
+.c1_text{
+  top: 51.6%;
+  left: 22%;
+}
+.c2_text{
+  top: 66%;
+  left: 36%;
+}
+.c3_text{
+  top: 36%;
+  left: 61%;
+}
+.c4_text{
+  top: 63%;
+  left: 77%;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #cf1437;
+}
+
+.circle.c1_0, .circle.c1_1, .circle.c1_2{
+  top: 55.6%;
+  left: 26.8%;
+  width: 25px;
+  height: 25px;
+}
+.circle.c2_0, .circle.c2_1, .circle.c2_2{
+  top: 70%;
+  left: 46.8%;
+  width: 15px;
+  height: 15px;
+}
+.circle.c3_0, .circle.c3_1, .circle.c3_2{
+  top: 35%;
+  left: 55.4%;
+  width: 40px;
+  height: 40px;
+}
+.circle.c4_0, .circle.c4_1, .circle.c4_2{
+  top: 67%;
+  left: 80%;
+  width: 20px;
+  height: 20px;
+}
+
+.circle.c1_0, .circle.c2_0, .circle.c3_0, .circle.c4_0{
+  animation: circle 4s 0s infinite;
+}
+.circle.c1_1, .circle.c2_1, .circle.c3_1, .circle.c4_1{
+  animation: circle 4s 1.33s infinite;
+}
+.circle.c1_2, .circle.c2_2, .circle.c3_2, .circle.c4_2{
+  animation: circle 4s 2.66s infinite;
+}
+.circle.c1_3, .circle.c2_3, .circle.c3_3, .circle.c4_3{
+  animation: circle 4s 2.66s infinite;
+}
+
+@keyframes circle {
+  0% {
+    background-color: rgba(247,139,31,1);
+    transform: scale(0);
+    border: 1px solid rgba(239, 20, 55, 0);
+  }
+  90% {
+    border: 1px solid rgba(239, 20, 55, .7);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    border: 1px solid rgba(239, 20, 55, 0);
+    opacity: 0;
+  }
+}
+
+.section-2 img{
+  width: 100%;
+}
+
+.section-2 h2{
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-family: "GothamProLight", Arial,sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  line-height: 64px;
+}
+
+/* PAGINATION */
+#navbar{
+  position: fixed;
+  right: 1%;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+
+#navbar li{
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#navbar li.active{
+  background-color: #f78b1f;
+}
+/* END PAGINATION */
+
+/* PPANEL SCROLL DOWN */
+.scroll_down{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  transition: all .5s;
+}
+
+.scroll_down >p{
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translateX(-45%);
+
+  font-family: "GothamPro", Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.scroll_down img{
+  margin-left: -20px;
+  width: 100%;
+}
+
+.scroll_down .arrow{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  border-radius: 5px;
+  transform: rotate(-45deg) translateX(-50%);
+  left: 50%;
+  bottom: 40%;
+}
+/* END PPANEL SCROLL DOWN */
+
+
+/* SLIDER */
+
+.wrap-slide{
+  height: 100%;
+  width: 100%;
+}
+.slides{
+  display: flex;
+  /* Automatic JS */ /* width: ; */ 
+  height: 100%;
+  transition: all 1.5s;
+}
+.slides-item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  position: relative;
+}
+.slides-item > p{
+  position: absolute;
+  left: 10%;
+  top: 18%;
+  color: #fff;
+  font-family: "GothamProLight", Arial,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  z-index: 10;
+}
+
+.slides-item img{
+  width: 100%;
+}
+
+.cont-1 {
+  background: url('../img/ice_1.png') center center no-repeat;
+  background-size: contain;
+}
+.cont-2 {
+  background: url('../img/ice_2.png') center center no-repeat;
+  background-size: contain;
+}
+.cont-3 {
+  background: url('../img/ice_3.png') center center no-repeat;
+  background-size: 96%;
+}
+
+.slides-range{
+  width: 70%;
+  height: 20px;
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.slides-range li{
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 87px;
+  height: 111px;
+  transform: scale(.6);
+  background: url('../img/touch-toggle.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 87px;
+  height: 111px;
+  transform: scale(.6);
+  background: url('../img/touch-toggle.png');
+  cursor: pointer;
+}
+/* END SLIDER */
+
+/* END MAIN CONTENT */
